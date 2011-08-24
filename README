@@ -1,0 +1,22 @@
+Tic-tac-toe for an arbitrary sized board.
+
+The Board class could be used to play the game interactively with a human 
+or against the computer itself simulating either player in successive moves.
+
+Some features-
+1. Besides the board initialization, each call for best_slot() is stateless.
+   In other words, as long as you update the state of the board using 
+   add_placement() or set_board(), you could reuse the board object for 
+   multiple (same sized) boards without worrying about any previous state.
+2. You can also create a new board object for every move without caring about 
+   previous state.   
+3. Currently, these is no sanity check done for the board i.e. make sure 
+   that the board has |num(X) - num(O)| <=1 or that X can not have more 
+   pieced than O if it is X's turn. These were trivial to check but I 
+   decided against it to allow random variations of the board. 
+   It is a feature, not a bug :)
+
+Features that could be added-
+1. Select a slot at random when there are multiple slots with the same 
+   (highest) weight.
+2. Use some kind protocol buffer/thrift glue.
